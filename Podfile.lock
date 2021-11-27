@@ -1,0 +1,24 @@
+PODS:
+  - Reveal-SDK (31)
+  - SVProgressHUD (2.2.5)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - Reveal-SDK
+  - SVProgressHUD
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Reveal-SDK
+    - SVProgressHUD
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Reveal-SDK: 62ae124d57732c4fe7e88635274ca24054dd2d29
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 52c317643d34d0c3d71e62051fe31b81d0626eb6
+
+COCOAPODS: 1.11.2

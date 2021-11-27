@@ -8,22 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		F54F66322750A33300E8221F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F66312750A33300E8221F /* AppDelegate.swift */; };
-		F54F66342750A33400E8221F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F66332750A33400E8221F /* SceneDelegate.swift */; };
-		F54F66362750A33400E8221F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54F66352750A33400E8221F /* ViewController.swift */; };
-		F54F66392750A33400E8221F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54F66372750A33400E8221F /* Main.storyboard */; };
 		F54F663B2750A33700E8221F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54F663A2750A33700E8221F /* Assets.xcassets */; };
 		F54F663E2750A33700E8221F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54F663C2750A33700E8221F /* LaunchScreen.storyboard */; };
+		F5B181B72750A5DF00E2CD13 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181AA2750A5DF00E2CD13 /* StatusCollectionViewCell.swift */; };
+		F5B181B82750A5DF00E2CD13 /* StarshipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181AB2750A5DF00E2CD13 /* StarshipListViewController.swift */; };
+		F5B181BA2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181AD2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift */; };
+		F5B181BC2750A5DF00E2CD13 /* StarshipListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181AF2750A5DF00E2CD13 /* StarshipListConfigurator.swift */; };
+		F5B181BD2750A5DF00E2CD13 /* StarshipListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181B02750A5DF00E2CD13 /* StarshipListRouter.swift */; };
+		F5B181BF2750A5DF00E2CD13 /* StarshipListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181B22750A5DF00E2CD13 /* StarshipListPresenter.swift */; };
+		F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */; };
+		F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C62750A9B300E2CD13 /* Starship.swift */; };
+		F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C82750AFD500E2CD13 /* AppManager.swift */; };
+		FDDFD9793502AC7E76B23F35 /* libPods-StarWarsStarships.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36C91C249F3FB015147D45D4 /* Pods-StarWarsStarships.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsStarships.release.xcconfig"; path = "Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships.release.xcconfig"; sourceTree = "<group>"; };
+		3A00B9557619CFD74102E6C0 /* Pods-StarWarsStarships.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsStarships.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships.debug.xcconfig"; sourceTree = "<group>"; };
+		E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarWarsStarships.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54F662E2750A33300E8221F /* StarWarsStarships.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsStarships.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54F66312750A33300E8221F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F54F66332750A33400E8221F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F54F66352750A33400E8221F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F54F66382750A33400E8221F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F54F663A2750A33700E8221F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F54F663D2750A33700E8221F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54F663F2750A33700E8221F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B181AA2750A5DF00E2CD13 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5B181AB2750A5DF00E2CD13 /* StarshipListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListViewController.swift; sourceTree = "<group>"; };
+		F5B181AD2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListCollectionViewCell.swift; sourceTree = "<group>"; };
+		F5B181AF2750A5DF00E2CD13 /* StarshipListConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListConfigurator.swift; sourceTree = "<group>"; };
+		F5B181B02750A5DF00E2CD13 /* StarshipListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListRouter.swift; sourceTree = "<group>"; };
+		F5B181B22750A5DF00E2CD13 /* StarshipListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListPresenter.swift; sourceTree = "<group>"; };
+		F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor Extensions.swift"; sourceTree = "<group>"; };
+		F5B181C62750A9B300E2CD13 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		F5B181C82750AFD500E2CD13 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDFD9793502AC7E76B23F35 /* libPods-StarWarsStarships.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38DC5E49303092E762031675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE50048C5C5EDD290440C512 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A00B9557619CFD74102E6C0 /* Pods-StarWarsStarships.debug.xcconfig */,
+				36C91C249F3FB015147D45D4 /* Pods-StarWarsStarships.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F54F66252750A33300E8221F = {
 			isa = PBXGroup;
 			children = (
 				F54F66302750A33300E8221F /* StarWarsStarships */,
 				F54F662F2750A33300E8221F /* Products */,
+				AE50048C5C5EDD290440C512 /* Pods */,
+				38DC5E49303092E762031675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +93,76 @@
 			isa = PBXGroup;
 			children = (
 				F54F66312750A33300E8221F /* AppDelegate.swift */,
-				F54F66332750A33400E8221F /* SceneDelegate.swift */,
-				F54F66352750A33400E8221F /* ViewController.swift */,
-				F54F66372750A33400E8221F /* Main.storyboard */,
+				F5B181A32750A4F400E2CD13 /* Model */,
+				F5B181A42750A4FE00E2CD13 /* Scenes */,
+				F5B181A52750A51100E2CD13 /* Extensions */,
+				F5B181A62750A51B00E2CD13 /* Views */,
+				F5B181A72750A52D00E2CD13 /* API */,
+				F5B181A82750A53500E2CD13 /* Managers */,
 				F54F663A2750A33700E8221F /* Assets.xcassets */,
 				F54F663C2750A33700E8221F /* LaunchScreen.storyboard */,
 				F54F663F2750A33700E8221F /* Info.plist */,
 			);
 			path = StarWarsStarships;
+			sourceTree = "<group>";
+		};
+		F5B181A32750A4F400E2CD13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5B181C62750A9B300E2CD13 /* Starship.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5B181A42750A4FE00E2CD13 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F5B181A92750A5DF00E2CD13 /* StarshipList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F5B181A52750A51100E2CD13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5B181A62750A51B00E2CD13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5B181A72750A52D00E2CD13 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F5B181A82750A53500E2CD13 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F5B181C82750AFD500E2CD13 /* AppManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F5B181A92750A5DF00E2CD13 /* StarshipList */ = {
+			isa = PBXGroup;
+			children = (
+				F5B181AF2750A5DF00E2CD13 /* StarshipListConfigurator.swift */,
+				F5B181B02750A5DF00E2CD13 /* StarshipListRouter.swift */,
+				F5B181B22750A5DF00E2CD13 /* StarshipListPresenter.swift */,
+				F5B181AB2750A5DF00E2CD13 /* StarshipListViewController.swift */,
+				F5B181AD2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift */,
+				F5B181AA2750A5DF00E2CD13 /* StatusCollectionViewCell.swift */,
+			);
+			path = StarshipList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F54F66422750A33700E8221F /* Build configuration list for PBXNativeTarget "StarWarsStarships" */;
 			buildPhases = (
+				DE19FF85A13E0E6B1D0BB06D /* [CP] Check Pods Manifest.lock */,
 				F54F662A2750A33300E8221F /* Sources */,
 				F54F662B2750A33300E8221F /* Frameworks */,
 				F54F662C2750A33300E8221F /* Resources */,
+				FC1D45009AADF1B8EB87EF5A /* [CP] Embed Pods Frameworks */,
+				5EC04781039EDBC2FCB53ECA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,34 +228,91 @@
 			files = (
 				F54F663E2750A33700E8221F /* LaunchScreen.storyboard in Resources */,
 				F54F663B2750A33700E8221F /* Assets.xcassets in Resources */,
-				F54F66392750A33400E8221F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EC04781039EDBC2FCB53ECA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE19FF85A13E0E6B1D0BB06D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsStarships-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC1D45009AADF1B8EB87EF5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsStarships/Pods-StarWarsStarships-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F54F662A2750A33300E8221F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F54F66362750A33400E8221F /* ViewController.swift in Sources */,
+				F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */,
+				F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */,
 				F54F66322750A33300E8221F /* AppDelegate.swift in Sources */,
-				F54F66342750A33400E8221F /* SceneDelegate.swift in Sources */,
+				F5B181BC2750A5DF00E2CD13 /* StarshipListConfigurator.swift in Sources */,
+				F5B181BD2750A5DF00E2CD13 /* StarshipListRouter.swift in Sources */,
+				F5B181BF2750A5DF00E2CD13 /* StarshipListPresenter.swift in Sources */,
+				F5B181BA2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift in Sources */,
+				F5B181B72750A5DF00E2CD13 /* StatusCollectionViewCell.swift in Sources */,
+				F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */,
+				F5B181B82750A5DF00E2CD13 /* StarshipListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F54F66372750A33400E8221F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F54F66382750A33400E8221F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F54F663C2750A33700E8221F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +442,7 @@
 		};
 		F54F66432750A33700E8221F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A00B9557619CFD74102E6C0 /* Pods-StarWarsStarships.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,7 +453,7 @@
 				INFOPLIST_FILE = StarWarsStarships/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,12 +465,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F54F66442750A33700E8221F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C91C249F3FB015147D45D4 /* Pods-StarWarsStarships.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,7 +482,7 @@
 				INFOPLIST_FILE = StarWarsStarships/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
