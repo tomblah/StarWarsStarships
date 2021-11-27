@@ -6,6 +6,8 @@ use_modular_headers!
 def shared_pods
   pod 'TinyConstraints' # , :git => 'https://github.com/roberthein/TinyConstraints.git', :branch => 'release/Swift-4.2'
   pod 'Reveal-SDK', :configurations => ['debug']
+  pod 'Alamofire', '~> 4.8'
+  pod 'SwiftyJSON', '~> 4.0'
   pod 'SVProgressHUD'
 end
 

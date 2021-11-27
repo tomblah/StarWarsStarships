@@ -10,13 +10,7 @@ import UIKit
 import os
 
 protocol StarshipListView: AnyObject {
-    
-}
-
-enum StarshipListStatus: String {
-    case loading = "Loading Starships..."
-    case noStarships = "No Starships :'("
-    case error = "Error loading starships. Please contact support."
+    func refresh()
 }
 
 class StarshipListPresenter {
@@ -28,7 +22,10 @@ class StarshipListPresenter {
     
     // MARK: - Properties
     
-
+    private var starships: [Starship]?
+    private(set) var errorLoading = false
+    var loading: Bool { starships == nil && !errorLoading }    
+    
     // MARK: - Life-cycle
     
     required init(router: StarshipListRouter, view: StarshipListView?) {
@@ -37,7 +34,20 @@ class StarshipListPresenter {
     }
     
     func viewDidLoad() {
-        
+        // Load the starships
+        self.view?.refresh()
+        APIClient.sharedInstance.getStarships { [weak self] (starships, _, error) in
+            guard let self = self else { return }
+            
+            // Store the result
+            self.starships = starships
+            
+            // Check for errors, and if so flag error state
+            if error != nil { self.errorLoading = true }
+                
+            // Refresh the view
+            self.view?.refresh()
+        }
     }
     
     // MARK: - Public functions

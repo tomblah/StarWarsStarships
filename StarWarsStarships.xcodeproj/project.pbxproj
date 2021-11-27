@@ -19,6 +19,9 @@
 		F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */; };
 		F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C62750A9B300E2CD13 /* Starship.swift */; };
 		F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C82750AFD500E2CD13 /* AppManager.swift */; };
+		F5B181CB2750B0F500E2CD13 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CA2750B0F500E2CD13 /* APIClient.swift */; };
+		F5B181CD2750B38C00E2CD13 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CC2750B38C00E2CD13 /* Constant.swift */; };
+		F5B181CF2750B41100E2CD13 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CE2750B41100E2CD13 /* Logging.swift */; };
 		FDDFD9793502AC7E76B23F35 /* libPods-StarWarsStarships.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor Extensions.swift"; sourceTree = "<group>"; };
 		F5B181C62750A9B300E2CD13 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		F5B181C82750AFD500E2CD13 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F5B181CA2750B0F500E2CD13 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F5B181CC2750B38C00E2CD13 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F5B181CE2750B41100E2CD13 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F54F66312750A33300E8221F /* AppDelegate.swift */,
+				F5B181CC2750B38C00E2CD13 /* Constant.swift */,
 				F5B181A32750A4F400E2CD13 /* Model */,
 				F5B181A42750A4FE00E2CD13 /* Scenes */,
 				F5B181A52750A51100E2CD13 /* Extensions */,
@@ -140,6 +147,7 @@
 		F5B181A72750A52D00E2CD13 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F5B181CA2750B0F500E2CD13 /* APIClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				F5B181C82750AFD500E2CD13 /* AppManager.swift */,
+				F5B181CE2750B41100E2CD13 /* Logging.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -298,15 +307,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */,
+				F5B181CF2750B41100E2CD13 /* Logging.swift in Sources */,
 				F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */,
 				F54F66322750A33300E8221F /* AppDelegate.swift in Sources */,
 				F5B181BC2750A5DF00E2CD13 /* StarshipListConfigurator.swift in Sources */,
 				F5B181BD2750A5DF00E2CD13 /* StarshipListRouter.swift in Sources */,
+				F5B181CB2750B0F500E2CD13 /* APIClient.swift in Sources */,
 				F5B181BF2750A5DF00E2CD13 /* StarshipListPresenter.swift in Sources */,
 				F5B181BA2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift in Sources */,
 				F5B181B72750A5DF00E2CD13 /* StatusCollectionViewCell.swift in Sources */,
 				F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */,
 				F5B181B82750A5DF00E2CD13 /* StarshipListViewController.swift in Sources */,
+				F5B181CD2750B38C00E2CD13 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
