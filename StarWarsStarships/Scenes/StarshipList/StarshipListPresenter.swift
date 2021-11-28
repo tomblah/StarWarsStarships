@@ -13,6 +13,15 @@ protocol StarshipListView: AnyObject {
     func refresh()
 }
 
+enum SortField: String, CaseIterable {
+    case natural = "None"
+    case favourited = "Favourited"
+    case name = "Name"
+    case edited = "Last updated"
+    case cost = "Cost"
+    case passengers = "# of passengers"
+}
+
 class StarshipListPresenter {
     
     // MARK: - Model, view, presenter
@@ -23,8 +32,40 @@ class StarshipListPresenter {
     // MARK: - Properties
     
     private var starships: [Starship]?
+
+    private(set) var selectedSortFieldIndex = 0
+    private var selectedSortField: SortField { SortField.allCases[selectedSortFieldIndex] }
+    
+    // TODO: suppress .favourited if no items favourited
+    var sortFieldTitles: [String] { SortField.allCases.map { $0.rawValue } }
+    
+    // TODO: for large numbers of starships and/or intensive sorting, might not be a good idea to not have this as a computed variable!
+    private var starshipsSorted: [Starship]? {
+        switch selectedSortField {
+        case .natural:
+            return starships
+        case .favourited:
+            return starships?.sorted {
+                // If both favourited, use ordering by name
+                if isFavourited($0) && isFavourited($1) { return $0.name.compare($1.name).rawValue > 0 }
+                return isFavourited($0)
+            }
+        case .name:
+            return starships?.sorted { $0.name.compare($1.name).rawValue < 0 }
+        case .edited:
+            return starships?.sorted { $0.edited.timeIntervalSince($1.edited) > 0 }
+        case .cost:
+            return starships?.sorted { $0.costInCredits ?? -1 > $1.costInCredits ?? -1 }
+        case .passengers:
+            return starships?.sorted { $0.passengers ?? -1 > $1.passengers ?? -1 }
+        }
+    }
+    
     private(set) var errorLoading = false
     var loading: Bool { starships == nil && !errorLoading }    
+    
+    var numberOfStarships: Int? { starships?.count }
+    var hasResultsToShow: Bool { (starships?.count ?? 0) > 0 }    
     
     // MARK: - Life-cycle
     
@@ -52,6 +93,38 @@ class StarshipListPresenter {
     
     // MARK: - Public functions
     
+    func starship(atIndex index: Int) -> Starship? {
+        guard let starshipsSorted = starshipsSorted, index < starshipsSorted.count else { return nil }
+        return starshipsSorted[index]
+    }
+    
+    func didToggleFavourte(_ starship: Starship) {
+        // Remove if already favourited
+        if isFavourited(starship) {
+            AppManager.sharedInstance.favouritedStarships.removeAll { $0 == starship }
+        } else {
+            AppManager.sharedInstance.favouritedStarships.append(starship)
+        }
+        
+        // Refresh the view
+        self.view?.refresh()
+    }
+    
+    func isFavourited(_ starship: Starship) -> Bool {
+        return AppManager.sharedInstance.favouritedStarships.contains(starship)
+    }
+    
+    func didSelectSortField(atIndex index: Int) {
+        selectedSortFieldIndex = index
+        
+        // Simply refresh, our starshipsSorted computed property takes care of sorting
+        self.view?.refresh()
+    }
+    
+    func didSelectItem(atIndex index: Int) {
+        guard let starship = starship(atIndex: index) else { return }
+        // TODO: implement
+    }
                 
     // MARK: - Private functions
     

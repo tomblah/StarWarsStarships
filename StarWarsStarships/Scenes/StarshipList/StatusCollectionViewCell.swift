@@ -57,8 +57,8 @@ class StatusCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Public functions
     
-    func display(_ status: StarshipListStatus) {
-        statusLabel.text = status.rawValue
+    func display(_ status: String) {
+        statusLabel.text = status
     }
 
 }

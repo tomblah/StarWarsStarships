@@ -9,6 +9,7 @@ def shared_pods
   pod 'Alamofire', '~> 4.8'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SVProgressHUD'
+  pod 'ActionSheetPicker-3.0'
 end
 
 target "StarWarsStarships" do

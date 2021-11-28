@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.7.1)
   - Alamofire (4.9.1)
   - Reveal-SDK (31)
   - SVProgressHUD (2.2.5)
@@ -6,6 +7,7 @@ PODS:
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - Alamofire (~> 4.8)
   - Reveal-SDK
   - SVProgressHUD
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ActionSheetPicker-3.0
     - Alamofire
     - Reveal-SDK
     - SVProgressHUD
@@ -21,12 +24,13 @@ SPEC REPOS:
     - TinyConstraints
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Reveal-SDK: 62ae124d57732c4fe7e88635274ca24054dd2d29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 56a392f8b29e7d2ac9d04b70629b3eb80fa68aad
+PODFILE CHECKSUM: 82d7edd114b7008fcb51ef6bf758c1cc6f3999fc
 
 COCOAPODS: 1.11.2

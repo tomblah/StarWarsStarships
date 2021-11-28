@@ -22,9 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         // Set up first view
+        let navigationController = UINavigationController()
         let starshipListViewController = StarshipListViewController()
         starshipListViewController.configurator = StarshipListConfigurator()
-        window?.rootViewController = starshipListViewController
+        navigationController.viewControllers = [ starshipListViewController ]
+        window?.rootViewController = navigationController
         
         return true
     }

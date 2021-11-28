@@ -94,7 +94,7 @@ class APIClient {
         guard let crew = starshipJson["crew"].string else { os_log("Could not parse crew for %{public}@, skipping.", type: .error, name); return nil }
         
         let passengers: Int?
-        if let passengersString = starshipJson["passengers"].string {
+        if let passengersString = starshipJson["passengers"].string?.replacingOccurrences(of: ",", with: "") {
             passengers = Int(passengersString)
         } else {
             passengers = nil
