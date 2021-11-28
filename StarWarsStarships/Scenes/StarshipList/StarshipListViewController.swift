@@ -109,6 +109,8 @@ class StarshipListViewController: UIViewController {
     
     @objc private func sortBarButtonItemPressed() {
         // Show sort options in action sheet
+        // TODO: probably want to disable the sort button while the starships are loading
+        guard presenter.hasResultsToShow else { return }
         ActionSheetStringPicker(title: Text.sortActionSheetStringPickerTitle, rows: presenter.sortFieldTitles, initialSelection: presenter.selectedSortFieldIndex, doneBlock: { picker, index, selectedModuleFileTitle in
             
             self.presenter.didSelectSortField(atIndex: index)
