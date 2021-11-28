@@ -16,7 +16,6 @@
 		F5B181BC2750A5DF00E2CD13 /* StarshipListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181AF2750A5DF00E2CD13 /* StarshipListConfigurator.swift */; };
 		F5B181BD2750A5DF00E2CD13 /* StarshipListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181B02750A5DF00E2CD13 /* StarshipListRouter.swift */; };
 		F5B181BF2750A5DF00E2CD13 /* StarshipListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181B22750A5DF00E2CD13 /* StarshipListPresenter.swift */; };
-		F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */; };
 		F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C62750A9B300E2CD13 /* Starship.swift */; };
 		F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C82750AFD500E2CD13 /* AppManager.swift */; };
 		F5B181CB2750B0F500E2CD13 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CA2750B0F500E2CD13 /* APIClient.swift */; };
@@ -44,7 +43,6 @@
 		F5B181AF2750A5DF00E2CD13 /* StarshipListConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListConfigurator.swift; sourceTree = "<group>"; };
 		F5B181B02750A5DF00E2CD13 /* StarshipListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListRouter.swift; sourceTree = "<group>"; };
 		F5B181B22750A5DF00E2CD13 /* StarshipListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipListPresenter.swift; sourceTree = "<group>"; };
-		F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor Extensions.swift"; sourceTree = "<group>"; };
 		F5B181C62750A9B300E2CD13 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		F5B181C82750AFD500E2CD13 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F5B181CA2750B0F500E2CD13 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -109,8 +107,6 @@
 				F54F66312750A33300E8221F /* AppDelegate.swift */,
 				F5B181A32750A4F400E2CD13 /* Model */,
 				F5B181A42750A4FE00E2CD13 /* Scenes */,
-				F5B181A52750A51100E2CD13 /* Extensions */,
-				F5B181A62750A51B00E2CD13 /* Views */,
 				F5B181A72750A52D00E2CD13 /* API */,
 				F5B181A82750A53500E2CD13 /* Managers */,
 				F54F663A2750A33700E8221F /* Assets.xcassets */,
@@ -136,21 +132,6 @@
 				F5BDE9C427534E7500E7C390 /* StarshipDetails */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F5B181A52750A51100E2CD13 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F5B181C42750A92900E2CD13 /* UIColor Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F5B181A62750A51B00E2CD13 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F5B181A72750A52D00E2CD13 /* API */ = {
@@ -329,7 +310,6 @@
 			files = (
 				F5BDE9CD27534E7500E7C390 /* StarshipDetailsConfigurator.swift in Sources */,
 				F5BDE9CF27534E7500E7C390 /* StarshipDetailsPresenter.swift in Sources */,
-				F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */,
 				F5B181CF2750B41100E2CD13 /* Logging.swift in Sources */,
 				F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */,
 				F5BDE9CB27534E7500E7C390 /* StarshipDetailsViewController.swift in Sources */,
