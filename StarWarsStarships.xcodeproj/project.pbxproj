@@ -25,6 +25,7 @@
 		F5BDE9CD27534E7500E7C390 /* StarshipDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C727534E7500E7C390 /* StarshipDetailsConfigurator.swift */; };
 		F5BDE9CE27534E7500E7C390 /* StarshipDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C827534E7500E7C390 /* StarshipDetailsRouter.swift */; };
 		F5BDE9CF27534E7500E7C390 /* StarshipDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C927534E7500E7C390 /* StarshipDetailsPresenter.swift */; };
+		F5BDE9D427536BB400E7C390 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F5BDE9D327536BB400E7C390 /* README.md */; };
 		FDDFD9793502AC7E76B23F35 /* libPods-StarWarsStarships.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		F5BDE9C727534E7500E7C390 /* StarshipDetailsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsConfigurator.swift; sourceTree = "<group>"; };
 		F5BDE9C827534E7500E7C390 /* StarshipDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsRouter.swift; sourceTree = "<group>"; };
 		F5BDE9C927534E7500E7C390 /* StarshipDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsPresenter.swift; sourceTree = "<group>"; };
+		F5BDE9D327536BB400E7C390 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F54F663A2750A33700E8221F /* Assets.xcassets */,
 				F54F663C2750A33700E8221F /* LaunchScreen.storyboard */,
 				F54F663F2750A33700E8221F /* Info.plist */,
+				F5BDE9D327536BB400E7C390 /* README.md */,
 			);
 			path = StarWarsStarships;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BDE9D427536BB400E7C390 /* README.md in Resources */,
 				F54F663E2750A33700E8221F /* LaunchScreen.storyboard in Resources */,
 				F54F663B2750A33700E8221F /* Assets.xcassets in Resources */,
 			);
