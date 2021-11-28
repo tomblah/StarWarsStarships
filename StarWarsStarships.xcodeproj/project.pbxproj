@@ -21,6 +21,10 @@
 		F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181C82750AFD500E2CD13 /* AppManager.swift */; };
 		F5B181CB2750B0F500E2CD13 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CA2750B0F500E2CD13 /* APIClient.swift */; };
 		F5B181CF2750B41100E2CD13 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B181CE2750B41100E2CD13 /* Logging.swift */; };
+		F5BDE9CB27534E7500E7C390 /* StarshipDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C527534E7500E7C390 /* StarshipDetailsViewController.swift */; };
+		F5BDE9CD27534E7500E7C390 /* StarshipDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C727534E7500E7C390 /* StarshipDetailsConfigurator.swift */; };
+		F5BDE9CE27534E7500E7C390 /* StarshipDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C827534E7500E7C390 /* StarshipDetailsRouter.swift */; };
+		F5BDE9CF27534E7500E7C390 /* StarshipDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDE9C927534E7500E7C390 /* StarshipDetailsPresenter.swift */; };
 		FDDFD9793502AC7E76B23F35 /* libPods-StarWarsStarships.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E39E7A618345B2ECD113816A /* libPods-StarWarsStarships.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,10 @@
 		F5B181C82750AFD500E2CD13 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		F5B181CA2750B0F500E2CD13 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F5B181CE2750B41100E2CD13 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		F5BDE9C527534E7500E7C390 /* StarshipDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsViewController.swift; sourceTree = "<group>"; };
+		F5BDE9C727534E7500E7C390 /* StarshipDetailsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsConfigurator.swift; sourceTree = "<group>"; };
+		F5BDE9C827534E7500E7C390 /* StarshipDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsRouter.swift; sourceTree = "<group>"; };
+		F5BDE9C927534E7500E7C390 /* StarshipDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipDetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				F5B181A92750A5DF00E2CD13 /* StarshipList */,
+				F5BDE9C427534E7500E7C390 /* StarshipDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -169,6 +178,17 @@
 				F5B181AA2750A5DF00E2CD13 /* StatusCollectionViewCell.swift */,
 			);
 			path = StarshipList;
+			sourceTree = "<group>";
+		};
+		F5BDE9C427534E7500E7C390 /* StarshipDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDE9C727534E7500E7C390 /* StarshipDetailsConfigurator.swift */,
+				F5BDE9C827534E7500E7C390 /* StarshipDetailsRouter.swift */,
+				F5BDE9C927534E7500E7C390 /* StarshipDetailsPresenter.swift */,
+				F5BDE9C527534E7500E7C390 /* StarshipDetailsViewController.swift */,
+			);
+			path = StarshipDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,9 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BDE9CD27534E7500E7C390 /* StarshipDetailsConfigurator.swift in Sources */,
+				F5BDE9CF27534E7500E7C390 /* StarshipDetailsPresenter.swift in Sources */,
 				F5B181C52750A92A00E2CD13 /* UIColor Extensions.swift in Sources */,
 				F5B181CF2750B41100E2CD13 /* Logging.swift in Sources */,
 				F5B181C92750AFD500E2CD13 /* AppManager.swift in Sources */,
+				F5BDE9CB27534E7500E7C390 /* StarshipDetailsViewController.swift in Sources */,
 				F54F66322750A33300E8221F /* AppDelegate.swift in Sources */,
 				F5B181BC2750A5DF00E2CD13 /* StarshipListConfigurator.swift in Sources */,
 				F5B181BD2750A5DF00E2CD13 /* StarshipListRouter.swift in Sources */,
@@ -314,6 +337,7 @@
 				F5B181BA2750A5DF00E2CD13 /* StarshipListCollectionViewCell.swift in Sources */,
 				F5B181B72750A5DF00E2CD13 /* StatusCollectionViewCell.swift in Sources */,
 				F5B181C72750A9B300E2CD13 /* Starship.swift in Sources */,
+				F5BDE9CE27534E7500E7C390 /* StarshipDetailsRouter.swift in Sources */,
 				F5B181B82750A5DF00E2CD13 /* StarshipListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

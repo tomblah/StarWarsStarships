@@ -91,6 +91,12 @@ class StarshipListPresenter {
         }
     }
     
+    func viewWillAppear() {
+        // Make sure the list is up to date, especially wrt favourites
+        // TODO: probably better to use observers here
+        self.view?.refresh()
+    }
+    
     // MARK: - Public functions
     
     func starship(atIndex index: Int) -> Starship? {
@@ -123,7 +129,7 @@ class StarshipListPresenter {
     
     func didSelectItem(atIndex index: Int) {
         guard let starship = starship(atIndex: index) else { return }
-        // TODO: implement
+        router.presentStarshipDetails(starship)
     }
                 
     // MARK: - Private functions

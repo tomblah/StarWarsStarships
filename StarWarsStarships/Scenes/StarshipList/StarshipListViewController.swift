@@ -58,6 +58,11 @@ class StarshipListViewController: UIViewController {
         setup()
         presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
             
     // MARK: - Setup
     
