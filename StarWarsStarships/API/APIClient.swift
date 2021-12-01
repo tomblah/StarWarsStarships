@@ -11,6 +11,10 @@ import os
 import Alamofire
 import SwiftyJSON
 
+enum APIError: Error {
+    case parsingError
+}
+
 class APIClient {
     
     // MARK: - Singleton
@@ -20,11 +24,9 @@ class APIClient {
     // MARK: - Constants
     
     enum API {
-        static let urlString = "https://swapi.dev/api"
-        static let starshipsPath = "starships"
+        static let starshipsRoute = "https://swapi.dev/api/starships/"
         
-        static let invalidRequestHttpCode = 400
-
+        // TODO: move somewhere more sensible
         static var dateFormatter: DateFormatter {
             let dateFormatter = DateFormatter()
             // See: https://stackoverflow.com/a/39433900/1017700
@@ -33,43 +35,29 @@ class APIClient {
             return dateFormatter
         }
     }
-    
+        
     // MARK: - Public functions
     
-    // The starship API is a little weird in that the "next" (and "previous" page) urls are given as absolute URLs, i.e. they could point to entirely different sites (although highly unlikely)!
-    // So to support pagination, our code is a little messy...
-    func getStarships(usingSpecificPageUrlString specificPageUrlString: String? = nil, completion: @escaping (_ starships: [Starship]?, _ nextPageUrlString: String?, _ error: Error?) -> Void) {
-        // If we have a specific page, use that, otherwise construct the URL
-        let starshipsUrlString = specificPageUrlString ?? API.urlString + "/" + API.starshipsPath
-        
-        // Make the call
-        os_log("Making call to %{public}@", log: Log.api, type: .info, starshipsUrlString)
-        Alamofire.request(starshipsUrlString).responseString { [weak self] response in
-            guard let self = self else { return }
+    func getStarships() async throws -> [Starship] {
+        // TODO: constant
+        let url = URL(string: API.starshipsRoute)!
+                
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
             
-            // Attempt to get the starships JSON objects
-            guard let data = response.data, let starshipsJson = JSON(data)["results"].array else {
-                os_log("Could not retrieve starships from %{public}@, aborting.", log: Log.api, type: .error, starshipsUrlString)
-                // TODO: probably want to put in an error message a user info dictionary and include in the error object
-                completion(nil, nil, NSError(domain: AppManager.sharedInstance.bundleIdentifier, code: API.invalidRequestHttpCode, userInfo: nil))
-                return
+            guard let starshipsJson = JSON(data)["results"].array else {
+                os_log("Could not retrieve starships from %{public}@, aborting.", log: Log.api, type: .error, "https://swapi.dev/api/starships/")
+                throw APIError.parsingError
             }
-
-            // Manually parse the result into our native starship objects
-            // NB: for simplicity, we'll skip any failings to parse starship objects, but print the error to the console
+            
             let starships: [Starship] = starshipsJson.compactMap { self.parseStarshipJson($0) }
-            
-            // Grab the next page url string
-            // NB: we'll probably won't need this for the scope of this coding challenge
-            let nextPageUrlString = JSON(data)["next"].string
-            
-            os_log("Retrieved \(starshipsJson.count) and successfully parsed \(starships.count) starships from \(starshipsUrlString). Next page url: \(nextPageUrlString != nil ? nextPageUrlString! : "[no more pages]")")
-            
-            completion(starships, nextPageUrlString, nil)
-            
+            return starships
+        } catch let error {
+            print(String(describing: error))
+            return [Starship]()
         }
     }
-    
+        
     // MARK: - Private functions
     
     private func parseStarshipJson(_ starshipJson: JSON) -> Starship? {

@@ -77,7 +77,18 @@ class StarshipListPresenter {
     func viewDidLoad() {
         // Load the starships
         self.view?.refresh()
-        APIClient.sharedInstance.getStarships { [weak self] (starships, _, error) in
+        Task {
+            do {
+                self.starships = try await APIClient.sharedInstance.getStarships()
+                self.view?.refresh()
+            } catch {
+                self.errorLoading = true
+                self.view?.refresh()
+            }
+        }        
+
+        self.view?.refresh()
+/*        APIClient.sharedInstance.getStarships { [weak self] (starships, _, error) in
             guard let self = self else { return }
             
             // Store the result
@@ -88,7 +99,7 @@ class StarshipListPresenter {
                 
             // Refresh the view
             self.view?.refresh()
-        }
+        } */
     }
     
     func viewWillAppear() {
